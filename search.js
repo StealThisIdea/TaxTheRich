@@ -163,7 +163,8 @@ function init() {
 
     const searcher = document.querySelector('#search');
 
-    searcher.addEventListener('touch', (e => {
+    searcher.addEventListener('pointerup', (e => {
+        e.preventDefault();
         searcher.scrollIntoView({behavior: 'smooth', block: 'start'});
     }));
 
