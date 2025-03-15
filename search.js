@@ -161,7 +161,13 @@ function init() {
     let html = generateHTML(results);
     updatePage(html);
 
-    document.querySelector('#search').addEventListener('input', (e => {
+    const searcher = document.querySelector('#search');
+
+    searcher.addEventListener('touch', (e => {
+        searcher.scrollIntoView({behavior: 'smooth', block: 'start'});
+    }));
+
+    searcher.addEventListener('input', (e => {
         // debugger;
         let value = e.target.value;
         let results = search(value);
