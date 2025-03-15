@@ -1,21 +1,62 @@
-<head>
-    <title>tax the rich</title>
-    <script src="./search.js"></script>
-    <script>
-        window.addEventListener('load', () => {
-            init();
-        });
-    </script>
-    <style>
-        li {
-            width: calc(100% / 3);
-        }
-    </style>
-</head>
-<body style="background-color: #7df6fa;color: #01016e;display: flex;flex-direction: column;text-align: center;font-size: 3rem;">
-    <div>image goes here</div>
-    <input type="text" name="search" id="search" style="height: 3rem;">
-    <ul id="results" style="list-style-type:none;padding-left: 0;flex-direction: row;display: flex;flex-wrap: wrap;">
-        
-    </ul>
-</body>
+<html>
+
+    <head>
+        <title>tax the rich</title>
+        <meta content="width=device-width, initial-scale=1" name="viewport" />
+        <script src="./search.js"></script>
+        <script>
+            window.addEventListener('load', () => {
+                init();
+            });
+        </script>
+        <style>
+            body {
+                background-color: #f0f9ff;
+                color: #01016e;
+                display: flex;
+                flex-direction: column;
+                text-align: center;
+                font-size: 3rem;
+            }
+
+            img {
+                padding-bottom: 2rem;
+                border-radius: 2em;
+            }
+
+            input {
+                height: 7rem;
+                font-size: 5rem;
+                border-radius: 2rem;
+            }
+
+            ul {
+                list-style-type:none;
+                padding-left: 0;
+                flex-direction: row;
+                display: flex;
+                flex-wrap: wrap;
+            }
+
+            @media screen and (max-width: 720px) {
+                li {
+                    width: calc(100% / 2);
+                }
+            }
+
+            @media screen and (min-width: 720px) {
+                li {
+                    width: calc(100% / 3);
+                }
+            }
+        </style>
+    </head>
+
+    <body>
+        <img src="./Image_20250307_103018.jpg" alt="">
+        <input type="text" name="search" id="search">
+        <ul id="results">
+        </ul>
+    </body>
+
+</html>
